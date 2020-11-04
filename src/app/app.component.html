@@ -1,0 +1,68 @@
+<div class="wrapper">
+  <div class="heading"><b>SpaceX</b> Launch Program</div>
+
+  <div class="main_grid" >
+    <div class="filters_container">
+       <h4><b>Filters</b></h4>
+       <h4 style="text-align:center;">Launch Year</h4>
+       <hr>
+       <button type="button" class="button button1" (click)="OnClickYear2006()">2006</button>
+       <button type="button" class="button button2" (click)="OnClickYear2007()">2007</button>
+       <button type="button" class="button button3" (click)="OnClickYear2008()">2008</button>
+       <button type="button" class="button button4" (click)="OnClickYear2009()">2009</button>
+       <button type="button" class="button button5" (click)="OnClickYear2010()">2010</button>
+       <button type="button" class="button button6" (click)="OnClickYear2011()">2011</button>
+       <button type="button" class="button button7" (click)="OnClickYear2012()">2012</button>
+       <button type="button" class="button button8" (click)="OnClickYear2013()">2013</button>
+       <button type="button" class="button button9" (click)="OnClickYear2014()">2014</button>
+       <button type="button" class="button button10" (click)="OnClickYear2015()">2015</button>
+       <button type="button" class="button button11" (click)="OnClickYear2016()">2016</button>
+       <button type="button" class="button button12" (click)="OnClickYear2017()">2017</button>
+       <button type="button" class="button button13" (click)="OnClickYear2018()">2018</button>
+       <button type="button" class="button button14" (click)="OnClickYear2019()">2019</button>
+       <button type="button" class="button button15" (click)="OnClickYear2020()">2020</button>
+
+       <h4 style="text-align:center;">Successful Launch</h4>
+       <hr>
+       <button type="button" class="button button16" (click)="OnClickLaunch()">True</button>
+       <button type="button" class="button button17" (click)="OnClickLaunchFalse()">False</button>
+       <h4 style="text-align:center;">Successful Landing</h4>
+       <hr>
+       <button type="button" class="button button18" (click)="OnClickLaunchandLand()">True</button>
+       <button class="button button19" (click)="OnClickLaunchandLandFalse()">False</button>
+    </div>
+    <div class="main_container">
+      <div class="grid" >
+        <div class="box shadow-md" *ngFor="let usr of lstuserlist">
+          <div class="image">
+            <img src="https://i.pinimg.com/originals/f0/79/8c/f0798c8a957c08e5c6ccbd2c6a8aa7d7.jpg">
+          </div>
+          <div class="content" >
+            <h1>{{usr.mission_name}}#{{usr.flight_number}}</h1>
+            <p>
+              <b>Mission IDs</b>
+              <span>{{usr.mission_id}}</span>
+            </p>
+            <p>
+              <b>Launch Years</b>
+              <span>{{usr.launch_year}}</span>
+            </p>
+            <p>
+              <b>Successful Launch</b>
+              <span>{{usr.launch_success}}</span>
+            </p>
+            <p>
+              <b>Successful Landing</b>
+              <span>{{usr.land_success}}</span>
+            </p>
+          </div>
+        </div>
+        
+       
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p style="font-size:medium;"><b>Developed by:</b> Minakkshi Sharrma</p>
+  </div>
+</div>
